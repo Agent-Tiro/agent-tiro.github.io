@@ -1,9 +1,8 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: default #home
+layout: default
 title: Home
 permalink: /
 ---
-This is a test
+Having spent a lot of time repeating the same advice in various locations I finally decided it was about time that I made myself a nice simple blog. This is intended to be a place to store my [Hacking Notes](./notes.html), [HackTheBox](./hackthebox.html) writeups and just [general thoughts](./blog.html).
+
+* * *
