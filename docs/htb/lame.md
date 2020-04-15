@@ -27,7 +27,7 @@ This command runs a SYN, or half-open scan against all ports. With the additiona
 The scan gives the following results:
 
 ![Scan Results]({{site.url}}/assets/lame/scan-results.png)
-
+![Scan Results](https://github.com/Agent-Tiro/agent-tiro.github.io/blob/master/docs/assets/lame/scan-results.png)
 ## Basic Vulnerability Check
 
 From here it is best to go through each service in turn, and check for any known vulnerabilities for the versions in use and for any interesting results from the nmap scripts that were run. Checking the service version in Searchsploit is a good way to quickly identify some vulnerabilities, but this is not always exhaustive and it is worth performing some searches on various sites to get more information. Straight away searchsploit delivers the goods with the first check against ftp.
