@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Lame
+permalink: /htb/lame
 ---
 
 # Lame
@@ -27,7 +28,7 @@ This command runs a SYN, or half-open scan against all ports. With the additiona
 
 The scan gives the following results:
 
-![Scan Results]({{site.url}}/assets/lame/scan-results.png)
+![Scan Results](https://agent-tiro.github.io/assets/lame/scan-results.png)
 
 
 ## Basic Vulnerability Check
