@@ -1,7 +1,6 @@
 ---
 layout: default
-title: Home
-permalink: /lame
+title: Lame
 ---
 
 # Lame
@@ -12,9 +11,11 @@ permalink: /lame
 >
 > **Difficulty:** Easy
 
+
 ## Intro
 
 [Lame](https://www.hackthebox.eu/home/machines/profile/1) was released on 14 Mar 2017 and among the first boxes released on the platform. It is one of the easier linux boxes available, which makes it a good place to start for beginners. I originally completed this when it had already retired and I was making my way through some of the older boxes to help further my understanding. As it was so simple I never made notes so I've had to fully go back and re-do the box to make this write-up, whilst doing this I discovered there was more and one way to do it!
+
 
 ## Getting Started
 
@@ -27,7 +28,8 @@ This command runs a SYN, or half-open scan against all ports. With the additiona
 The scan gives the following results:
 
 ![Scan Results]({{site.url}}/assets/lame/scan-results.png)
-![Scan Results](https://github.com/Agent-Tiro/agent-tiro.github.io/blob/master/docs/assets/lame/scan-results.png)
+
+
 ## Basic Vulnerability Check
 
 From here it is best to go through each service in turn, and check for any known vulnerabilities for the versions in use and for any interesting results from the nmap scripts that were run. Checking the service version in Searchsploit is a good way to quickly identify some vulnerabilities, but this is not always exhaustive and it is worth performing some searches on various sites to get more information. Straight away searchsploit delivers the goods with the first check against ftp.
@@ -43,6 +45,7 @@ A final check for the distcc service also reveals another potential attack vecto
 ![Searchsplot Results({{site.url}}/assets/lame/distcc-searchsploit.png)
 
 So from the an initial check of all the available services there are publcily available exploits for 3 of them! This is incredibly unusual for hackthebox. 
+
 
 ## Exploitation
 
