@@ -28,7 +28,7 @@ This command runs a SYN, or half-open scan against all ports. With the additiona
 
 The scan gives the following results:
 
-![Scan Results](https://agent-tiro.github.io/assets/lame/scan-results.png)
+![Scan Results]({{site.url}}/assets/lame/scan-results.png)
 
 
 ## Basic Vulnerability Check
@@ -43,7 +43,7 @@ Nothing was found for ssh, but the Samba service also had an entry within search
 
 A final check for the distcc service also reveals another potential attack vector. I think this service may be a bit slow to start upon spawning the box as my initial nmap scan didn't identify the port as being open. Yet when I ran another later on it was there. 
 
-![Searchsplot Results({{site.url}}/assets/lame/distcc-searchsploit.png)
+![Searchsplot Results]({{site.url}}/assets/lame/distcc-searchsploit.png)
 
 So from the an initial check of all the available services there are publcily available exploits for 3 of them! This is incredibly unusual for hackthebox. 
 
