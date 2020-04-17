@@ -94,7 +94,8 @@ Yay! Straight to root. Lets grab that flag.
 
 As a fun exercise I decided to make an autopwn exploit for this box. The basic part of running the exploit was straight forward, especially if you had a listener setup seperately. The trickier part was getting the listener running, explot to run and the listener to accept the incoming connection. There are probably more refined ways to do this - but it works.
 
-```import argparse
+```
+import argparse
 from smb.SMBConnection import SMBConnection
 from smb import smb_structs
 import socket
