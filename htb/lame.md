@@ -92,3 +92,4 @@ It is possible to null authenticate to the /tmp share and use the logon command 
 
 Yay! Straight to root. Lets grab that flag. 
 
+update to come - autopwn script
