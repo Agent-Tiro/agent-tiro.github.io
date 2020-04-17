@@ -92,4 +92,8 @@ It is possible to null authenticate to the /tmp share and use the logon command 
 
 Yay! Straight to root. Lets grab that flag. 
 
+* * *
+
+It turns out that the distcc service is also exploitable and at some point I will revist this and do a writeup for that path. But for now I want to show how easy it is to build a script to exploit this. 
+
 
