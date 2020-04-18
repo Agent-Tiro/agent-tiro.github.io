@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "HackTheBox Lame Autopwn"
+permalink: /blog/lame-autopwn
 ---
 
 # Building The Autopwn
