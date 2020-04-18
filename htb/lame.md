@@ -68,7 +68,7 @@ Having a look at the ruby script is useful for figuring out how the exploit work
 
 The small excerpt from the msf module shows that a username ending in ```:)``` and password of random characters is sent and a service becomes available on port 6200. It isn't necessary to use the metasploit module to exploit this, you could login with a username ending in ```:)``` and a random password. Then use netcat to connect to the bindshell on port 6200. However, for an unknown reason the backdoor is not accessible in this instance. Best guess is that there are some firewall rules on the box that prevent 6200 from becoming externally available. 
 
-This is the reason why it is important to have a quick check of all services first before diving in. As we already know that we have other potential avenues. 
+This is the reason why it is important to have a quick check of all services first before diving in. As we already know that we have other potential avenues, rather than continuing to try and get this exploit to work.  
 
 ### Samba
 
@@ -79,6 +79,8 @@ Checking the Rapid7 site for this [exploit](https://www.rapid7.com/db/modules/ex
 Checking the ruby script shows that it is as easy as sending a crafted username with a payload after it. 
 
 ![Samba Exploit]({{site.url}}/assets/lame/msf-script.png)
+
+Amriunix gives a good explanation this vulnerability in a [blog post](https://amriunix.com/post/cve-2007-2447-samba-usermap-script/). But essentially it is because unfiltered user input is being passed to /bin/sh as part of the username map script. 
 
 First of all there needs to be a share we can connect to, so smbclient is used to get a list of available shares. 
 
@@ -92,7 +94,9 @@ It is possible to null authenticate to the /tmp share and use the logon command 
 
 Yay! Straight to root. Lets grab that flag. 
 
-As a fun exercise I decided to make an autopwn exploit for this box. The basic part of running the exploit was straight forward, especially if you had a listener setup seperately. The trickier part was getting the listener running, explot to run and the listener to accept the incoming connection. There are probably more refined ways to do this - but it works.
+* * *
+
+As a fun exercise I decided to make an autopwn exploit for this box. The basic part of running the exploit was straight forward, especially if you had a listener setup seperately. The trickier part was getting the listener running, exploit to run and the listener to accept the incoming connection. There are probably more refined ways to do this - but it works. The full script is shown below and is available on my [github](https://github.com/Agent-Tiro/HackTheBoxScripts/blob/master/lame-exploit.py). 
 
 ```
 import argparse
