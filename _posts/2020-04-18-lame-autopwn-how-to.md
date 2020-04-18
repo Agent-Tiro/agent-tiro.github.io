@@ -2,6 +2,7 @@
 layout: post
 title: "HackTheBox Lame Autopwn"
 permalink: /blog/lame-autopwn
+categories: hackthebox
 ---
 
 # Building The Autopwn
