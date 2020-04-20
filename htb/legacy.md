@@ -35,7 +35,7 @@ The scan gives the following results:
 
 The big thing to take away from these results is that it is a Windows XP box. This went end of life in April 2014, so there is bound to be some unpatched vulnerabilities to play with! SMB has had many vulnerabilities over the years and is a good place to start. A nice easy way to quickly check for vulnerabilities is using the Nmap scripting engine. By checking the contents of the Nmap scripts directory it is possible to see which ones are available.
 
-![Nmap SMB Vuln Scripts({{site.url}}/assets/legacy/nse-search.png)
+![Nmap SMB Vuln Scripts]({{site.url}}/assets/legacy/nse-search.png)
 
 As Nmap scripts are things that you may be checking quite often I find it useful to setup an alias to the command shown in the screenshot above. You can do this by adding the following line into your ```.bashrc``` file: 
 
