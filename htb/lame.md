@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Lame
+title: HackTheBox - Lame Writeup
 permalink: /htb/lame
 ---
 

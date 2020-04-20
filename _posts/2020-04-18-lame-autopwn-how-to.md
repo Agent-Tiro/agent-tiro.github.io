@@ -34,7 +34,7 @@ conn = SMBConnection(username, password, 'doesnotmatter', 'lame', use_ntlm_v2 = 
 conn.connect('10.10.10.3', 445)
 ```
 
-In this part we set support to SMB2 to false to enable connection to the older version of Samba that we are targetting. The details for the connection are completed, using the documents as a reference for what should be passed. Then connect is used to initiate the connection to the target IP and port. 
+In this part we set support SMB2 to false to enable connection to the older version of Samba that we are targetting. The details for the connection are completed, using the documents as a reference for what should be passed. Then connect is used to initiate the connection to the target IP and port. 
 
 If you really wanted this could be the end of your exploit script. You could setup a netcat listener and run this exploit and enjoy your shell. Or if you wanted to challenge yourself you could try and setup your own listener in python to catch the incoming connection
 
