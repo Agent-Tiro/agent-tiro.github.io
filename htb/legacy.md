@@ -45,7 +45,7 @@ Now you can just use ```nse smb-vuln``` to get the same results. Since there are
 
 ``` nmap -p 139,445 10.10.10.4 --script=smb-vuln* ```
 
-The results show that the SMB service is vulnerable to MS08-067, made famous by Conficker, and MS17-010 that was made famous by the Wannacry ransomware attacks. As the box name is Legacy it's a safe assumption to make that MS08-067 is the intended method. Especially since I know there is another box that is has MS17-010 as the intended method. 
+The results show that the SMB service is vulnerable to MS08-067, made famous by Conficker, and MS17-010 that was made famous by the Wannacry ransomware attacks. As the box name is Legacy it's a safe assumption to make that MS08-067 is the intended method. Especially since I know there is another box that has MS17-010 as the intended method. 
 
 ## Exploit
 
@@ -55,22 +55,29 @@ Searchsploit shows a few exploits are available for this, however there is a goo
 
 Lets breakdown what all those flags mean:
 
-``` -p ``` is the payload of choice, in this case a simple TCP reverse shell for Windows.
-``` LHOST= ``` is the listening host IP address to be set. 
-``` LPORT= ``` is the port you want to listen on. 
-``` EXITFUNC= ``` sets a function hash in the payload that specifies a DLL and a function to call once the payload is complete.
-``` -b ``` is a list of bad characters - these were taken directly from Jivoi's script.
-``` -f ``` is the format to create the shellcode in. 
-``` -v ``` sets the variable that the shellcode will be assigned to. The default is ``` buf ``` and I am only changing this to match what is in the original script.
-``` -a ``` sets the architecture the shellcode is to be run on. 
+> ``` -p ``` is the payload of choice, in this case a simple TCP reverse shell for Windows.
+>
+> ``` LHOST= ``` is the listening host IP address to be set. 
+>
+> ``` LPORT= ``` is the port you want to listen on. 
+>
+> ``` EXITFUNC= ``` sets a function hash in the payload that specifies a DLL and a function to call once the payload is complete.
+>
+> ``` -b ``` is a list of bad characters - these were taken directly from Jivoi's script.
+>
+> ``` -f ``` is the format to create the shellcode in. 
+>
+> ``` -v ``` sets the variable that the shellcode will be assigned to. The default is ``` buf ``` and I am only changing this to match what is in the original script.
+>
+> ``` -a ``` sets the architecture the shellcode is to be run on. 
 
 This will output some shellcode as show below, that can be copy pasted into the exploit to replace the existing shellcode. 
 
 ![Shellcode]({{site.url}}/assets/legacy/generate-shellcode.png)
 
-As the existing script is written in python2 and debian / Kali having dropped support for it, the exploit needs to be updated to python3. I've uploaded a copy of it to [github](https://github.com/Agent-Tiro/HackTheBoxScripts/blob/master/Python3-MS08-067.py) incase it's of use to anyone else.
+As the existing script is written in python2 and debian / Kali having dropped support for it, the exploit needs to be updated to python3. I've uploaded a copy of it to [github](https://github.com/Agent-Tiro/HackTheBoxScripts/blob/master/Python3-MS08-067.py) incase it's of use to anyone else. It didn't require much editing, mainly sorting the print statements and making sure any payloads or set to bytes.
 
-Running an Nmap scan to do OS detection gives an indication that it is most likely XP SP3.
+Running an Nmap scan to do OS detection gives an indication that it is most likely XP SP3. In Nmap ```-O``` is the flag to use for OS detection.
 
 ![OS Detection]({{site.url}}/assets/legacy/aggressive-os.png)
 
