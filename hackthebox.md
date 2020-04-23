@@ -10,5 +10,6 @@ A collection of write-ups for retired boxes that detail my methodology and how I
 
 | Name               | Difficulty | User Owned  | Root Owned  |
 |:-------------------|:-----------|:------------|:------------|
+| [devel](./devel)   | easy       | 15 Mar 2019 | 15 Mar 2019 |
 | [legacy](./legacy) | easy       | 24 Jul 2018 | 24 Jul 2018 |
 | [lame](./lame)     | easy       | 21 Jun 2018 | 21 Jun 2018 |         
