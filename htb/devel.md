@@ -132,7 +132,7 @@ The top result is also in exploitdb, so it is already available on Kali via sear
 
 This is the same command that is detailed in the comments of the programme. The ```40564.c file``` is a straight copy from exploitdb and didn't require any modifications. Once it is compiled it can be placed into the directory that the smb server is running and it can be executed to give that lovely system shell. 
 
-![Yay System]({{site.url}})/assets/devel/system.png)
+![Yay System]({{site.url}}/assets/devel/system.png)
 
 A fun box that is pretty simple in each step and only needs basic enumeration to find the way forward. 
 
