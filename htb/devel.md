@@ -112,7 +112,7 @@ The listener will then catch the incoming connection and give a command shell.
 
 ## Privilege Escalation
 
-As we are a low privileged user it is a good idea to do some more enumeration to find potential methods of escalating privileges. Whilst I was preparing for my OSCP I found two good blog posts that I were very useful for Windows privilege escalation, and gave me methods to solve pretty much every Windows box in the labs:
+As we are a low privileged user it is a good idea to do some more enumeration to find potential methods of escalating privileges. Whilst I was preparing for my OSCP I found two good blog posts that were very useful for Windows privilege escalation, and gave me methods to solve pretty much every Windows box in the labs:
 * [Fuzzy Security](https://www.fuzzysecurity.com/tutorials/16.html)
 * [Absolomb](https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/)
 
