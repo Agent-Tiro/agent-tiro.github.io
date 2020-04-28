@@ -15,7 +15,7 @@ permalink: /htb/lame
 
 ## Intro
 
-[Lame](https://www.hackthebox.eu/home/machines/profile/1) was released on 14 Mar 2017 and among the first boxes released on the platform. It is one of the easier linux boxes available, which makes it a good place to start for beginners. I originally completed this when it had already retired and I was making my way through some of the older boxes to help further my understanding. As it was so simple I never made notes so I've had to fully go back and re-do the box to make this write-up, whilst doing this I discovered there was more and one way to do it!
+[Lame](https://www.hackthebox.eu/home/machines/profile/1) was released on 14 Mar 2017 and among the first boxes released on the platform. It is one of the easier linux boxes available, which makes it a good place to start for beginners. I originally completed this when it had already retired and I was making my way through some of the older boxes to help further my understanding. As it was so simple I never made notes so I've had to fully go back and re-do the box to make this write-up, whilst doing this I discovered there was more than one way to do it!
 
 
 ## Getting Started
