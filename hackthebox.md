@@ -10,6 +10,7 @@ A collection of write-ups for retired boxes that detail my methodology and how I
 
 | Name                 | Difficulty | User Owned  | Root Owned  |
 |:---------------------|:-----------|:------------|:------------|
+| [beep](./beep)       | easy       | 14 May 2019 | 14 May 2019 |
 | [popcorn](./popcorn) | medium     | 06 Jul 2018 | 06 Jul 2018 |
 | [devel](./devel)     | easy       | 15 Mar 2019 | 15 Mar 2019 |
 | [legacy](./legacy)   | easy       | 24 Jul 2018 | 24 Jul 2018 |

@@ -45,7 +45,7 @@ A final check for the distcc service also reveals another potential attack vecto
 
 ![Searchsplot Results]({{site.url}}/assets/lame/distcc-searchsploit.png)
 
-So from the an initial check of all the available services there are publcily available exploits for 3 of them! This is incredibly unusual for hackthebox. 
+So from the an initial check of all the available services there are publicly available exploits for 3 of them! This is incredibly unusual for hackthebox. 
 
 
 ## Exploitation
