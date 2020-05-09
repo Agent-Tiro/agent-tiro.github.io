@@ -35,7 +35,7 @@ That is a lot of services to check out!
 
 ## Enumeration
 
-So there is a potentially large attack surface and for us to prioritise what to target a quick check of all services should be performed to see if the versions identified have any publicly available exploits. This can be done either by checking sites like [cvedetails(https://www.cvedetails.com/) or with searchsploit on the commandline. This is complimented with trying to grab version numbers on those that Nmap didn't identify - like the webserver.
+So there is a potentially large attack surface and for us to prioritise what to target a quick check of all services should be performed to see if the versions identified have any publicly available exploits. This can be done either by checking sites like [cvedetails](https://www.cvedetails.com/) or with searchsploit on the commandline. This is complimented with trying to grab version numbers on those that Nmap didn't identify - like the webserver.
 
 When checking the webserver it was identified as running Elastix, which is a PBX solution. A quick check of searchsploit has a few promising exploits for this.
 
@@ -57,13 +57,15 @@ There is also a [blog](http://www.offensive-security.com/vulndev/freepbx-exploit
 
 This can only be done if an extension or username is known. Also another thing to consider is that the current script does not support SSL connections and will not work out the box in this instance. So the script needs to be updated, but first it is best to check that a valid extension can be identified. 
 
-The SIPVicious suite of tools provide a good selection of methods of enumerating and testing SIP related technology. It isn't installed as standard on Kali, but is available in the repositories. Using the svwar tool it is possible to identify potentially valid extensions. This essentially dials all combinations to identify the valid ones. The following command is used:
+The SIPVicious suite of tools provide a good selection of methods of enumerating and testing SIP related technology. It isn't installed as standard on Kali, but is available in the repositories. Using the svwar tool it is possible to identify potentially valid extensions. This essentially dials all combinations within the range specific to identify any valid extensions. The following command is used:
 
 ``` svwar -m INVITE -e1-500 10.10.10.7 ```
 
 This sets the mode to perform an INVITE scan against extensions 1 to 500. With the results shown below. 
 
 ![Svwar]({{site.url}}/assets/beep/extension-discovery.png)
+
+The script itself will throw up a lot of errors whilst running, but upon completion one result stands out, due to having ``` reqauth ``` which identifies it as being a valid extension.
 
 ## Exploitation
 
@@ -79,7 +81,7 @@ Noting like a good error message to learn something new! Troubleshooting this is
 
 ![SSLScan]({{site.url}}/assets/beep/sslscan.png)
 
-Checking ``` /etc/ssl/openssl.cnf ``` shows that only TLS 1.2 is the minimum supported. This is what is causing the error in the exploit. A quick config change and we should be good. The following lines are updated from:
+Checking ``` /etc/ssl/openssl.cnf ``` shows that TLS 1.2 is the minimum supported. This is what is causing the error in the exploit. A quick config change and we should be good. The following lines are updated from:
 
 ```
 [system_default_sect]
