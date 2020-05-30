@@ -46,8 +46,10 @@ Quite a few for the version in use, and most of them are remote command executio
 
 >issue exists due to a poor regex in the file ParserLib.pas
 >
->```function findMacroMarker(s:string; ofs:integer=1):integer;
->begin result:=reMatch(s, '\{[.:]|[.:]\}|\|', 'm!', ofs) end;```
+>```
+>function findMacroMarker(s:string; ofs:integer=1):integer;
+>begin result:=reMatch(s, '\{[.:]|[.:]\}|\|', 'm!', ofs) end;
+>```
 >
 >it will not handle null byte so a request to 
 >
@@ -91,7 +93,7 @@ Which will instantly give a shell with command prompt.
 
 Running ``` syteminfo ``` gives a quick overview of the target, and in this case we can see it is Server 2012 R2 and has had 31 hotfixes installed. 
 
-![Systeminfo]){{site.url}}/assets/optimum/systeminfo.png)
+![Systeminfo])({{site.url}}/assets/optimum/systeminfo.png)
 
 If you want to get your hands really dirty you can sit and manually check which patches haven't been applied and see if any of those fix privilege escaltion vulnerabilities. Or you can use [Windows Exploit Suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester), which will take the output of Systeminfo and work out what is missing. This gives an indication of what vulnerabilities are potentially present on the system.
 
@@ -109,7 +111,7 @@ The binary can be got from:
 
 > https://github.com/offensive-security/exploitdb-bin-sploits/raw/master/bin-sploits/41020.exe
 
-This can be done quickly from the command prompt with curl. 
+This can be done quickly from the command prompt with wget. 
 
 ![Download Exploit]({{site.url}}/assets/optimum/exploit-download.png)
 
