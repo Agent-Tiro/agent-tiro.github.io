@@ -59,6 +59,8 @@ Quite a few for the version in use, and most of them are remote command executio
 
 This means that if a crafted search query is performed it is possible to break the function and execute your own code. How the other scripts exploit this is by creating a Visual Basic script to download netcat from a webserver in the first request, then a second request to execute that script, and finally a third request to run the netcat reverse shell command. 
 
+## Exploitation
+
 Now rather than diving straight into using one of those scripts lets have a play with it manually and get it working! A nice simple method I use to confirm code execution is to get the target to run the ping command, and watch for the response in tcpdump or wireshark. Looking at the information about the exploit, this should be as easy as:
 
 ```https://10.10.10.8/?search=%00{.exec|ping.exe 10.10.14.9.}```
@@ -90,6 +92,8 @@ Then a listener can be setup using netcat, and the exploit used to launch the re
 Which will instantly give a shell with command prompt.
 
 ![User Shell]({{site.url}}/assets/optimum/user-shell.png)
+
+## Privilege Escalation
 
 Running ``` syteminfo ``` gives a quick overview of the target, and in this case we can see it is Server 2012 R2 and has had 31 hotfixes installed. 
 
