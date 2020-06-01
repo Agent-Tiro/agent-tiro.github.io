@@ -97,7 +97,7 @@ Which will instantly give a shell with command prompt.
 
 Running ``` syteminfo ``` gives a quick overview of the target, and in this case we can see it is Server 2012 R2 and has had 31 hotfixes installed. 
 
-![Systeminfo])({{site.url}}/assets/optimum/systeminfo.png)
+![Systeminfo]({{site.url}}/assets/optimum/systeminfo.png)
 
 If you want to get your hands really dirty you can sit and manually check which patches haven't been applied and see if any of those fix privilege escaltion vulnerabilities. Or you can use [Windows Exploit Suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester), which will take the output of Systeminfo and work out what is missing. This gives an indication of what vulnerabilities are potentially present on the system.
 
