@@ -10,6 +10,7 @@ A collection of write-ups for retired boxes that detail my methodology and how I
 
 | Name                 | Difficulty | User Owned  | Root Owned  |
 |:---------------------|:-----------|:------------|:------------|
+| [bastard](./bastard) | medium     | 23 Jul 2020 | 23 Jul 2020 |
 | [optimum](./optimum) | easy       | 26 Feb 2019 | 01 Mar 2019 |
 | [beep](./beep)       | easy       | 14 May 2019 | 14 May 2019 |
 | [popcorn](./popcorn) | medium     | 06 Jul 2018 | 06 Jul 2018 |
