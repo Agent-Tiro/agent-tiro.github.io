@@ -45,7 +45,7 @@ Narrowing this down is easier than it seems. Firstly we can discount all the ver
 
 ## Exploitation
 
-Checking the exploit script out shows that some small modification is need, or at least confirmation about the relevant endpoints. 
+Checking the exploit script out shows that some small modification is needed, or at least confirmation about the relevant endpoints. 
 
 ```
 $url = 'http://vmweb.lan/drupal-7.54';
@@ -53,7 +53,7 @@ $endpoint_path = '/rest_endpoint';
 $endpoint = 'rest_endpoint';
 ```
 
-The $url variable can be swapped out for the target, but the $endpoint_path and $endpoint need to be confirmed. Testing the script endpoint in the browser showed it wasn't a valid path. 
+The ```$url``` variable can be swapped out for the target, but the ```$endpoint_path``` and ```$endpoint``` need to be confirmed. Testing the script endpoint in the browser showed it wasn't a valid path. 
 
 ![Invalid Path]({{site.url}}/assets/bastard/endpoint.png)
 
@@ -77,7 +77,8 @@ $endpoint = 'rest_endpoint';
 $file = [
     'filename' => 'tiro.php',
     'data' => '<?php system($_REQUEST["cmd"]); ?>'
-];```
+];
+```
 
 The script can then be executed and we should get confirmation that the ```tiro.php``` file has been uploaded. 
 
@@ -108,7 +109,7 @@ With this shell we can now move onto finding the privilege escalation!
 
 As standard systeminfo is run to get an idea for what state the target is in. Thankfully the output is short and lets us know it is a Server 2008 R2 with no hotfixes applied. 
 
-![Systeminfo]({{site.url}}/assets/bastard/systeminfo.png)
+![Systeminfo]({{site.url}}/assets/bastard/system-info.png)
 
 With this being an old server, and no patches applied there are going to be a lot of privilege escalation exploits available. The harder part is going to be finding which ones were likely to be the intended path at the time of release. 
 
@@ -116,11 +117,11 @@ Another thing that should be checked is what privileges we have. Using ```whoami
 
 ![whoami]({{site.url}}/assets/bastard/whoami.png)
 
-From that list the ```SeImpersonatePrivilege``` being enabled is of interest as famously abused by the rotten and juicy potato exploits. At this point you could throw darts at a list of potential exploits and end up as system. But for this I will use windows exploit suggester in the same way covered in the [optimum]({{site.url}}/htb/optimum)
+From that list the ```SeImpersonatePrivilege``` being enabled is of interest as famously abused by the rotten and juicy potato exploits. At this point you could throw darts at a list of potential exploits and end up as system. But for this I will use windows exploit suggester in the same way covered in the [optimum]({{site.url}}/htb/optimum) writeup.
 
 ![exploit suggester]({{site.url}}/assets/bastard/exploit-suggester.png)
 
-Starting from the bottom up seemed like a good idea, and once you ignore all the internet explorer related vulnerabilities a few standout. The one that I decided to use was MS10-059, mainly because I had used it previously, and handily egre55 has a precompiled version on his [github](https://github.com/egre55/windows-kernel-exploits/tree/master/MS10-059:%20Chimichurri/Compiled)
+Starting from the bottom up seemed like a good idea, and once you ignore all the internet explorer related vulnerabilities (removed from output in screenshot) a few standout. The one that I decided to use was MS10-059, mainly because I had used it previously, and handily egre55 has a precompiled version on his [github](https://github.com/egre55/windows-kernel-exploits/tree/master/MS10-059:%20Chimichurri/Compiled)
 
 This can be downloaded and then transfered to the target and run. 
 
