@@ -29,6 +29,8 @@ The people who are working on the content are vey knowledgeable in their field a
 
 Sections in the modules are also linked into real world application of the techniques. Giving a good understanding of how to use them effectively during a real penetration test, and the exercises and skills assessments remind me of things I've done in real engagements in the past. 
 
+![Nmap Module]({{site.url}}/assets/posts/nmap-module.png)
+
 ## Cubes
 
 The academy is split into different tiers. With each tier costing a different amount of cubes, and cubes can be [purchased](https://academy.hackthebox.eu/billing) on a one off transaction or a subscription model. With varying amounts depending upon your requirements. As you complete exercises within a module and the final skills assessment you are rewarded with some cubes as well. The table below gives an overview of this. 
@@ -44,6 +46,8 @@ The academy is split into different tiers. With each tier costing a different am
 Upon signing up to the Academy you are gifted 30 cubes, and by completing the [Intro To Academy](https://academy.hackthebox.eu/module/15) you can gain an additional 10 cubes. This is enough to complete all of the Tier0 content - of which there are currently 10 modules. Doing them will give you a good indication of the quality on offer and from there on you can decide what you want to learn. 
 
 The cost of the cubes may appear expensive - especially for the high tier modules. But this is down to the perception of what you assume you are going to get. Many people are used to online training materials and a lot of it is very much the same and repeats the same content to the same level. The content available on the academy should be thought of as more on the same level that you would expect when you pay for a professional certification course - such as those offered by Offensive Security, SANs etc. You are not just paying for the educational content, but also the supporting infrastructure for the labs that lets you consolidate your learning. The bonus you get with this method is that you don't need to spend large sums of money on a full course. You can pick and choose the elements that interest you the most. 
+
+![Dashboard]({{site.url}}/assets/posts/dashboard.png)
 
 ## Summary
 
